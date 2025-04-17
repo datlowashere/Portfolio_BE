@@ -2,7 +2,8 @@ import swaggerJsdoc from 'swagger-jsdoc';
 import { Options } from 'swagger-jsdoc';
 
 const port = process.env.PORT || 5000;
-const url = `http://localhost:${port}`;
+const baseUrl = process.env.BASE_URL || 'http://localhost';
+const url = `${baseUrl}:${port}`;
 
 const options: Options = {
   definition: {
